@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Validation</title>
+  </head>
+  <body>
+    <div class="container">
+      <ion-icon class="icon" name="paper-plane-outline"></ion-icon>
+      <form>
+        <div class="input-group">
+          <label>Full Name</label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            id="contact-name"
+            onkeyup="validateName()"
+          />
+          <span id="name-error"></span>
+        </div>
+
+        <div class="input-group">
+          <label>Phone No.</label>
+          <input
+            type="tel"
+            placeholder="9162638801"
+            id="contact-phone"
+            onkeyup="validatePhone()"
+          />
+          <span id="phone-error"></span>
+        </div>
+
+        <div class="input-group">
+          <label>Email Id</label>
+          <input
+            type="email"
+            placeholder="Enter your Email"
+            id="contact-email"
+            onkeyup="validateEmail()"
+          />
+          <span id="email-error"></span>
+        </div>
+
+        <div class="input-group">
+          <label>Message</label>
+          <textarea
+            rows="5"
+            placeholder="Your message"
+            id="contact-message"
+            onkeyup="validateMessage()"
+          ></textarea>
+          <span id="message-error"></span>
+        </div>
+
+        <button type="submit" onclick="return validateForm()">Submit</button>
+        <span id="submit-error"></span>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
